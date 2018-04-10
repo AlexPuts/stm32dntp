@@ -19,5 +19,3 @@ TX                   |PA10              |
 
 
 
-![STM32](https://raw.github.com/AlexPutz/stm32dntp/master/pictures/STM32.png)
-
