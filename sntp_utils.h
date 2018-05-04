@@ -4,9 +4,11 @@
 #include <EEPROM.h>
 #include <ModbusIP_ENC28J60_STM.h>
 #define ENC28J60_CS PA8
+
 #ifndef PACKETSIZE
 #define PACKETSIZE 48
-#endif // PACKETSIZE
+#endif
+
 #define STARTOFTIME 2208988800UL
 
 #ifndef UTIL_H
@@ -22,6 +24,7 @@
                    ((x)>>24 & 0x000000FFUL) )
 #define ntohl(x) htonl(x)
 #endif
+
 void ntp_recv_and_respond(uint16_t dest_port, uint8_t src_ip[4], uint16_t src_port, const char *data, uint16_t len);
 void set_Internal_time_GPS(uint8_t hr,uint8_t min,uint8_t sec,uint8_t day,uint8_t mnth, int yr);
 String readValue(HardwareSerial *serial);
